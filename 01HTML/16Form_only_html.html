@@ -20,38 +20,38 @@
     -->
 
     <form action="/test.jsp" method="get">
-        <div>
-            <label>아이디</label>
+        <div class="row">
+            <label class="title">아이디</label>
             <input  name="userid"   type="text"  />
             <a href="javascript:void(0)">중복확인</a>
         </div>
-        <div>
-            <label>비밀번호</label>
+        <div class="row"
+            <label class="title">비밀번호</label>
             <input name="password" type="password" />
         </div>
-        <div>
-            <label>비밀번호 확인</label>
+        <div class="row">
+            <label class="title">비밀번호 확인</label>
             <input name="re-password" type="password" />
         </div>
-        <div>
-            <label>이름</label>
+        <div class="row">
+            <label class="title">이름</label>
             <input name="username" type="text" />
         </div>
-        <div>
-            <label>우편번호</label>
+        <div class="row">
+            <label class="title">우편번호</label>
             <input name="zipcode" type="text" />
             <a href="javascript:void(0)">검색</a>
         </div>
-        <div>
-            <label>기본주소</label>
+        <div class="row">
+            <label class="title">기본주소</label>
             <input name="addr1" type="text" />
         </div>
-        <div>
-            <label>상세주소</label>
+        <div class="row">
+            <label class="title">상세주소</label>
             <input name="addr2" type="text" />
         </div>
-        <div>
-            <label>휴대전화</label>
+        <div class="row">
+            <label class="title">휴대전화</label>
             <select>
                 <option value="" selected>010</option>
                 <option value="">011</option>
@@ -59,8 +59,8 @@
             <input type="text" />
             <input type="text" />
         </div>
-        <div>
-            <label>연락처</label>
+        <div class="row">
+            <label class="title">연락처</label>
             <select>
                 <option value="" selected>053</option>
                 <option value="">055</option>
@@ -69,8 +69,8 @@
             <input type="text" />
             <input type="text" />
         </div>
-        <div>
-            <label>이메일</label>
+        <div class="row">
+            <label class="title">이메일</label>
             <input type="text" />
             <select>
                 <option value="" selected>@naver.com</option>
@@ -78,13 +78,13 @@
                 <option value="">@google.com</option>
             </select>
         </div>
-        <div>
-            <label>생년월일</label>
+        <div class="row">
+            <label class="title">생년월일</label>
             <input name="birth" value="a" type="radio" /> 양
             <input name="birth" value="b" type="radio" /> 음
         </div>
         
-        <div>
+        <div class="row">
             <select>
                 <option value="" selected>2025</option>
                 <option value="">2024</option>
@@ -102,15 +102,15 @@
             </select>
         </div>
         <hr/>
-        <div>
+        <div class="row">
             <input id="email-recv" name="email-recv" type="checkbox" /> 
             <label for="email-recv">이메일 수신에 동의합니다.</label>
         </div>
-        <div>
+        <div class="row">
             <input id="sms-recv" name="email-recv" type="checkbox" /> 
             <label for="sms-recv">문자메시지 수신에 동의합니다.</label>
         </div>
-        <div>
+        <div class="row">
             <input type="submit" value="회원가입" />
         </div>
 
