@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* common */
+        *{box-sizing: border-box;}
+        body{margin: 0;padding: 0;}
+        ul{list-style: none;margin: 0;padding: 0;}
+        a{text-decoration: none;color:black;}
+
+        .wrapper
+        .wrapper>header {}
+        .wrapper>header>.top-header {}
+        /* gnb */
+        .wrapper>header>nav {
+            height: 80px;
+            border: 1px solid red;
+        }
+        .wrapper>header>nav>ul.main-menu {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-around;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrapper>header>nav>ul.main-menu>li {
+            text-align: center;
+        }
+        .wrapper>header>nav>ul.main-menu>li>a {
+            border: 1px solid #000;
+            display: block;
+            height: 100%;
+            line-height: 80px;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu {
+            border: 1px solid red;
+            /* visibility: hidden; */
+            opacity: 0;
+            transform: translateY(20px);
+            transition: .8s;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li {
+
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a {
+            display: block;
+            padding: 20px;
+        }
+        .wrapper>header>nav>ul.main-menu:hover {
+            overflow: visible;
+        }
+        .wrapper>header>nav>ul.main-menu:hover>li>ul.sub-menu {
+            /* visibility: visible; */
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="">MAIN-MENU</a>
+                        <ul class="sub-menu">
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MAIN-MENU</a>
+                        <ul class="sub-menu">
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MAIN-MENU</a>
+                        <ul class="sub-menu">
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MAIN-MENU</a>
+                        <ul class="sub-menu">
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                            <li><a href="">SUB-MENU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
