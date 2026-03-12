@@ -22,6 +22,9 @@
             margin: 0;
             padding: 0;
         }
+        p,h3 {
+            margin: 0;
+        }
 
         body {
             margin: 0;
@@ -67,27 +70,61 @@
         .wrapper>main>section>.card-container {
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
         }
         .wrapper>main>section>.card-container>.card {
             padding: 20px;
             border: 1px solid #000;
             border-radius: 10px;
+            flex-basis: 400px;
         }
 
         .wrapper>main>section>.container {
             display: flex;
             flex-direction: column;
+            gap: 20px;
             border: 1px solid #000;
             border-radius: 10px;
             padding: 20px;
         }
-        .wrapper>main>section>.container>.media-item>.media-content {
+        .wrapper>main>section>.container>.media-item {
             display: flex;
+            gap: 20px;
+        }
+        .wrapper>main>section>.container>.media-item>.media-img {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #9d9d9d;
+        }
+        .wrapper>main>section>.container>.media-item>.media-content {
+            /* display: flex; */
+            /* flex-direction: column; */
+        }
+        .wrapper>main>section>.container>.media-item>.media-content>h3 {
+            margin-top: 0;
+        }
+        .wrapper>main>section>.container>.media-item>.media-content>h3 {
+            /* flex-basis: 100px; */
+        }
+        .wrapper>main>section>.container>.media-item>.media-content>p {
+            /* flex-grow: 1; */
         }
 
         .wrapper>footer {
         /* footer */
+            /* padding: 20px; */
+        }
+        .wrapper>footer>h2 {
             padding: 20px;
+            margin: 0;
+        }
+        .wrapper>footer>.footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #1d1d1d;
+            color: #fff;
         }
     </style>
 </head>
