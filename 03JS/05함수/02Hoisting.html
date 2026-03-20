@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+        /* 
+            호이스팅
+            변수와 함수의 정의가 코드 실행전에 메모리에 미리 저장되는 현상
+            function 에약어 사용시 호이스팅 처리됨
+            var 예약어 사용시 호이스팅 처리됨
+            cf) 변수지정 : let , var / (심볼릭)상수지정 : const 
+        */
+
+        // const 로 하는 이유 : 기준값이 정하는 경우, 바뀌지 않는 값
+        // const tmp = 10;
+        // let tmp = 10;
+        // console.log("tmp",tmp);
+        // tmp=20;
+        // console.log("tmp",tmp);
+
+        // -------------------------
+        //  변수 HOISTING
+        // -------------------------
+        // a = 10;
+        // console.log('a',a);
+        // var a; // 절차지향적 이지만 먼저 선언 되었다고 봄 - 절차지향적문법에 어긋나기 때문에 let 을 사용권장
+
+        // b = 20;
+        // console.log("b",b);
+        // let b; // hoisting 되지 않음 
+
+
+        // --------------------
+        // 함수 HOISTING
+        // --------------------
+
+        // HOISTING 됨
+        h1();
+        function h1() {
+            console.log("HELLO WORLD");
+        }
+        // HOISTING 안됨
+        h2();
+        const h2 = () => {
+            console.log("HELLO WORLD");
+        }
+
+        // var 변수는 가급적 사용은 지양 (사용하지않는게 좋음)
+        // function 은 목적에 따라 사용여부 결정(처음에 만든 효과를 주고 싶으면 사용 - )
+        // function 은 기본으로 이름부여도 가능하다(익명함수 or 이름부여된 함수 선택가능)
+        // 화살표 함수 (()=>{}) 는 기본적으로 익명함수로 처리된다
+
+
+
+    </script>
+</body>
+</html>
