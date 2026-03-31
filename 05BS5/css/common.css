@@ -1,0 +1,30 @@
+* {box-sizing: border-box;}
+
+body {margin: 0; padding: 0;}
+
+a{text-decoration: none; color: black;}
+
+ul{list-style: none; padding: 0; margin: 0;}
+
+/* LAYOUT */
+.wrapper {}
+
+/* header */
+.wrapper>header {}
+.wrapper>header>.top-header {}
+.wrapper>header>nav {}
+
+/* main */
+.wrapper>main {}
+.wrapper>main>section {margin-bottom: 20px;}
+.wrapper>main>section.card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* footer */
+.wrapper>footer {
+    height: 300px;
+    background-color: darkgray;
+}
