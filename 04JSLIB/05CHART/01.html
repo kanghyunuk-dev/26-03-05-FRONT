@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="width : 800px; height : 500px;">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+        const dataSet = [
+            // 단일 dataset
+            // {
+            //     label: '# of Votes',
+            //     data: [12, 19, 3, 5, 2, 3],
+            //     borderWidth: 1
+            // }
+
+            // 여러 Dataset
+            {
+                label : 'red',
+                data : [20,0,0,0,0,0],
+                borderWidth : 1,
+                backgorundColor : 'red',
+                borderColor : '',
+            },
+            {
+                label : 'orange',
+                data : [0,12,0,0,0,0],
+                borderWidth : 1,
+                backgorundColor : 'orange',
+                borderColor : '',
+            },
+            {
+                label : 'yellow',
+                data : [0,0,12,0,0,0],
+                borderWidth : 1,
+                backgorundColor : 'yellow',
+                borderColor : '',
+            },
+            {
+                label : 'green',
+                data : [0,0,0,12,0,0],
+                borderWidth : 1,
+                backgorundColor : 'green',
+                borderColor : '',
+            },
+            {
+                label : 'blue',
+                data : [0,0,0,0,12,0],
+                borderWidth : 1,
+                backgorundColor : 'blue',
+                borderColor : '',
+            },
+            {
+                label : 'navy',
+                data : [0,0,0,0,0,12],
+                borderWidth : 1,
+                backgorundColor : 'navy',
+                borderColor : '',
+                
+                barPercentage : 1, // 개별 막대에 대한 너비 비율(%)
+                categoryPercentage : 1, // 전체 너비 중 해당 막대 그룹이 차지하는 비율(%)
+            },
+        ]
+
+        const options = {
+            animation : {
+                delay : (el) => {
+                    return el.dataIndex*100;
+                    console.log(el);
+                }
+            }, 
+            scales: {
+                x : {
+                    stacked : true,    
+                },
+                y: {
+                    beginAtZero: true
+                    // min : 0,
+                    // max : 100,
+                    // ticks : {
+                    //     stepSize : 10,
+                    // }
+                },
+            },
+            onClick : (e, chartEl) => {
+                    // console.log(e);
+                    console.log(chartEl);
+            }
+        }
+
+        new Chart(ctx, {
+            type: 'bar', // bar, line, pie, doughnut, bubble, scatter, heatmap ...
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: dataSet,
+            },
+            options: options,
+        });
+    </script>
+    
+</body>
+
+</html>
